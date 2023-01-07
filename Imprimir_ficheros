@@ -1,0 +1,11 @@
+import os
+
+# Directorio donde se encuentran los archivos
+directorio = 'ruta/al/directorio'
+
+# Obtenemos todos los archivos en el directorio
+archivos = os.listdir(directorio)
+
+# Imprimimos cada archivo
+for archivo in archivos:
+  print(archivo)
