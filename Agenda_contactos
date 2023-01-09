@@ -1,0 +1,35 @@
+# Creamos un diccionario vacío para almacenar los números de teléfono
+agenda = {}
+
+# Creamos un diccionario vacío para almacenar los números de teléfono
+agenda = {}
+
+while True:
+  # Mostramos el menú de opciones
+  print("1. Añadir número de teléfono")
+  print("2. Buscar número de teléfono")
+  print("3. Salir")
+  opcion = int(input("Selecciona una opción: "))
+
+  if opcion == 1:
+    # Solicitamos el nombre y el número de teléfono
+    nombre = input("Introduce el nombre: ")
+    numero = input("Introduce el número de teléfono: ")
+    # Añadimos la información al diccionario
+    agenda[nombre] = numero
+  elif opcion == 2:
+    # Solicitamos el nombre de la persona
+    nombre = input("Introduce el nombre de la persona: ")
+    # Buscamos el número de teléfono en el diccionario
+    encontrados = False
+    for persona in agenda:
+      if persona.startswith(nombre):
+        print(f"{persona}: {agenda[persona]}")
+        encontrados = True
+    if not encontrados:
+      print(f"No se han encontrado personas que comiencen con {nombre} en la agenda.")
+  elif opcion == 3:
+    # Salimos del bucle
+    break
+  else:
+    print("Opción inválida.")
